@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main()  =>runApp(MaterialApp(
@@ -13,9 +14,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Padding(
-        child: Text("hello"),
-        padding: EdgeInsets.all(100),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text("Hello"),
+          FlatButton(
+            onPressed: () {},
+            color: Colors.amber,
+            child: Text("click me"),
+          ),
+          Container(
+            color: Colors.black12,
+            padding: EdgeInsets.all(30),
+            child: Text("click me"),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
